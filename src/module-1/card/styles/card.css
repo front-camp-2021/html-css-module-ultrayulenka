@@ -29,6 +29,11 @@
     padding: 30px 20px 5px;
 }
 
+.card__link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .card__image {
     margin: auto;
     padding: 0 20px 30px;
@@ -103,6 +108,7 @@
     padding: 14px 10px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .button_primary{
