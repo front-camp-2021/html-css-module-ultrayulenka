@@ -11,30 +11,33 @@
 }
 
 .card {
-    max-width: 33.33%;
+    max-width: 400px;
     min-width: 290px;
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
     border-radius: 8px;
+    overflow: hidden;
 }
 
 .card__inner {
-    min-height: 419px;
+    height: 419px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px 20px 0;
+    padding: 30px 20px 5px;
 }
 
 .card__image {
     margin: auto;
     padding: 0 20px 30px;
+    max-height: 65%;
 }
 
 .card__image img {
-    width: 100%;
+    max-width: 100%;
+    height: 100%;
 }
 
 .card__details {
@@ -50,7 +53,7 @@
     border-radius: 3px;
     padding: 6px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: nowrap;
 }
 
@@ -102,10 +105,9 @@
     justify-content: center;
 }
 
-.button-primary{
+.button_primary{
     background-color: #6F64F8;
     color: #FFFFFF;
-
 }
 
 .button__text{
