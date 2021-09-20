@@ -11,8 +11,8 @@
 }
 
 .cards-list__item {
-    flex: 33%;
-    max-width: 400px;
+    flex: 32%;
+    max-width: 500px;
     min-width: 290px;
     display: block;
 }

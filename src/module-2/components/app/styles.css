@@ -23,29 +23,30 @@ body {
 
 main {
     width: 68%;
-    height: 100%;
 }
 
+
 @media screen and (max-width: 1200px) { 
+    .cards-list__item {
+        max-width: 400px;
+    }
 
     .options-list__amount {
         display: none;
     }
 
-    .cards-list__item {
-        width: 290px;
-    }
+
 }
 
 @media screen and (max-width: 720px) {
-
     .cards-list__item {
-        max-width: 100%;
+        max-width: 400px;
         min-width: 255px;
     }
 
     .sidebar {
         width: 100%;
+        height: fit-content;
         padding: 5px;
         background-color: #ffffff;
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);

@@ -14,7 +14,7 @@
 .search__header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
 }
 
 .search__text {
