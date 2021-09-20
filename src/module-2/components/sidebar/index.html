@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../minimal.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Filters</title>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <h3 class="section-title">
+                Filters
+            </h3>
+            <button class="button button_small">
+                <div class="arrows-left"></div>
+            </button>
+        </div>
+        <div class="sidebar__container">
+            <ul class="filter-list">
+                <li class="filter-item">
+                    <h4 class="filter-item__title">Multi Range</h4>
+                    <ul class="options-list">
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="first-option" name="$10">
+                            <label class="options-list__label options-list__label_round" for="first-option">$10</label>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="second-option" name="$10-$100">
+                            <label class="options-list__label options-list__label_round" for="second-option">$10-$100</label>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="third-option" name="$100-$500">
+                            <label class="options-list__label options-list__label_round" for="third-option">$100-$500</label>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="forth-option" name="$500">
+                            <label class="options-list__label options-list__label_round" for="forth-option">$500</label>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="all" name="all" checked>
+                            <label class="options-list__label options-list__label_round" for="all">All</label>
+                        </li>
+                    </ul>
+                </li>
+                <li class="filter-item">
+                    <h4 class="filter-item__title">Category</h4>
+                    <ul class="options-list">
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="cell-phones" name="cell-phones">
+                            <label class="options-list__label" for="cell-phones">Cell Phones</label>
+                            <span class="options-list__amount">1920</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="computers" name="computers">
+                            <label class="options-list__label" for="computers">Computers & Tablets</label>
+                            <span class="options-list__amount">1820</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="phone-accessories" name="phone-accessories" checked>
+                            <label class="options-list__label" for="phone-accessories">Cell Phone Accessories</label>
+                            <span class="options-list__amount">462</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="appliances" name="appliances">
+                            <label class="options-list__label" for="appliances">Appliances</label>
+                            <span class="options-list__amount">6556</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="audio" name="audio">
+                            <label class="options-list__label" for="audio">Audio</label>
+                            <span class="options-list__amount">120</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="iphone-accessories" name="iphone-accessories">
+                            <label class="options-list__label" for="iphone-accessories">iPhone Accessories</label>
+                            <span class="options-list__amount">353</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="cameras" name="cameras">
+                            <label class="options-list__label" for="cameras">Cameras & Camcorders</label>
+                            <span class="options-list__amount">45</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="iphone-cases" name="iphone-cases">
+                            <label class="options-list__label" for="iphone-cases">iPhone Cases & Clips</label>
+                            <span class="options-list__amount">456</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="tv" name="tv">
+                            <label class="options-list__label" for="tv">TV & Home Theater</label>
+                            <span class="options-list__amount">55</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="kitchen-appliances" name="kitchen-appliances">
+                            <label class="options-list__label" for="kitchen-appliances">Small Kitchen Appliances</label>
+                            <span class="options-list__amount">10</span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="filter-item">
+                    <h4 class="filter-item__title">Brand</h4>
+                    <ul class="options-list">
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="insigni" name="insigni">
+                            <label class="options-list__label" for="insigni">Insigni</label>
+                            <span class="options-list__amount">220</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="samsung" name="samsung">
+                            <label class="options-list__label" for="samsung">Samsung</label>
+                            <span class="options-list__amount">120</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="apple" name="apple">
+                            <label class="options-list__label" for="apple">Apple</label>
+                            <span class="options-list__amount">320</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="hp" name="hp">
+                            <label class="options-list__label" for="hp">HP</label>
+                            <span class="options-list__amount">32</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="sony" name="sony">
+                            <label class="options-list__label" for="sony">Sony</label>
+                            <span class="options-list__amount">520</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="metra" name="metra">
+                            <label class="options-list__label" for="metra">Metra</label>
+                            <span class="options-list__amount">55</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="dyne" name="dyne">
+                            <label class="options-list__label" for="dyne">Dyne</label>
+                            <span class="options-list__amount">120</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="lg" name="lg">
+                            <label class="options-list__label" for="lg">LG</label>
+                            <span class="options-list__amount">98</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="canon" name="canon">
+                            <label class="options-list__label" for="canon">Canon</label>
+                            <span class="options-list__amount">99</span>
+                        </li>
+                        <li class="options-list__item">
+                            <input class="options-list__input" type="checkbox" id="speck" name="speck">
+                            <label class="options-list__label" for="speck">Speck</label>
+                            <span class="options-list__amount">575</span>
+                        </li>
+                    </div>
+                </li>
+            </ul>
+            <button class="button button_primary button_large">
+                CLEAR ALL FILTERS
+            </button>
+        </div>
+    </aside>
+</body>
+</html>

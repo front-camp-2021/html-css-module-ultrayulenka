@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+.logo-container {
+    padding: 0 5px;
+    display: flex;
+    margin-bottom: 1.75vh;
+}
+
+.logo {
+    margin-right: 22px;
+}
+
+.title {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #7E72F2;
+    padding-top: 20px;
+}
