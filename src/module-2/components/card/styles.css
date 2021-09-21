@@ -30,8 +30,7 @@
 .card__details {
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .rating {
@@ -77,7 +76,7 @@
 }
 
 .card__button-group {
-    margin-top: 22px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
 }
