@@ -1,11 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 .sidebar {
     width: 30%;
     font-family: Montserrat, sans-serif;
@@ -27,29 +19,12 @@
     align-self: center;
 }
 
-.button_small {
+_small {
     height: 40px;
     width: 47px;
     border-radius: 8px;
     background-color: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
-}
-
-.arrows-left::before,
-.arrows-left::after {
-    position: relative;
-    content: "";
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-left: 1px solid #2C2C2C;
-    border-top: 1px solid #2C2C2C;
-    transform: rotate(-45deg);
-    bottom: 2px;
-}
-
-.arrows-left::before{
-    margin-right: 2px;
 }
 
 .sidebar__container {
@@ -136,7 +111,7 @@
     visibility: hidden;
 }
 
-.options-list__input:checked ~ .options-list__label::before{
+.options-list__input:checked ~ .options-list__label::before {
     background-color: #6F64F8;
 }
 
@@ -147,23 +122,49 @@
     padding-top: 5px;
 }
 
-.button_large {
-    display: block;
-    width: 100%;
-    height: 56px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
-    border-radius: 8px;
-    font-family: inherit;
-    text-align: center;
+.arrows_down {
+    display: none;
 }
 
-.button_large span {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
+@media screen and (max-width: 1200px) { 
+    .options-list__amount {
+        display: none;
+    }
 }
 
-.button_primary{
-    background-color: #6F64F8;
-    color: #FFFFFF;
+@media screen and (max-width: 720px) {
+    .sidebar {
+        width: 100%;
+        height: fit-content;
+        padding: 5px;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+        margin-bottom: 2vh;
+        border-radius: 8px;
+    }
+
+    .sidebar__header {
+        margin: 0;
+    }
+
+    .sidebar__container {
+        display: none;
+    }
+
+    .sidebar .button_large {
+        display: none;
+    }
+
+    .sidebar .button_small {
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .arrows_left {
+        display: none;
+    }
+
+    .arrows_down {
+        display: block;
+    }
 }

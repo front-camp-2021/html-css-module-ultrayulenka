@@ -101,38 +101,4 @@
     flex: 50%;
 }
 
-.button {
-    display: block;
-    width: 100%;
-    border: none;
-    padding: 14px 10px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
 
-.button_primary{
-    background-color: #6F64F8;
-    color: #FFFFFF;
-}
-
-.button__text{
-    align-self: center;
-    font-family: Montserrat, sans-serif;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 18px;
-    display: block;
-   
-}
-
-.button__icon{
-    align-self: center;
-    height: 13px;
-    width: 15px;
-}
-
-.button__icon + .button__text {
-    margin-left: 9px;
-}
