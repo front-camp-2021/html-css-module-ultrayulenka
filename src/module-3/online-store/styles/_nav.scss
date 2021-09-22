@@ -1,0 +1,27 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.nav {
+    display: flex;
+
+    &__link {
+        display: block;
+        @include text(17px, "small", "regular");
+        color: $primary-color;
+        margin: 0 10px;
+        align-self: flex-end;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &_current {
+            color: $font-color;
+            @include disable-link;
+        }
+    }
+}
+
+.home-icon {
+    height: 17px;
+}

@@ -1,0 +1,16 @@
+.cards-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start; 
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 20px 20px;
+    padding-top: 1.5vh;
+
+    &__item {
+        flex: 32%;
+        display: block;
+    }
+}

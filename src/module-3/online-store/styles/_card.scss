@@ -1,0 +1,86 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.card {
+    font-weight: 400;
+    background: $bg-color-container;
+    @extend %small-shadow;
+    border-radius: 8px;
+    max-width: 500px;
+    min-width: 290px;
+    overflow: hidden;
+
+    &__inner {
+        height: 419px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 20px 5px;
+    }
+
+    &__image {
+        margin: auto;
+        padding: 0 20px 30px;
+        max-height: 65%;
+
+        img {
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px; 
+    }
+
+    &__price {
+        @include text(21px);
+    }
+
+    &__title {
+        @include text(19px, "smaller");
+        width: 65%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+    }
+
+    &__description {
+        @include text(14px, "subtext", "light");
+        margin: 0; 
+        padding-top: 3px;
+    }
+
+    &__button-group {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+    }
+
+    &__button {
+        width: 100%;
+        padding: 14px 10px;
+        display: flex;
+        justify-content: center;
+        @include text(18px, "small", "bold");
+    }
+}
+
+.rating {
+    width: 65px;
+    background-color: $primary-color;
+    border-radius: 3px;
+    padding: 6px;
+    display: flex;
+    justify-content: space-around;
+
+    &__value {
+        display: block;
+        align-self: center;
+        @include text(17px, "small");
+        color: $primary-font-color;
+    }
+}
