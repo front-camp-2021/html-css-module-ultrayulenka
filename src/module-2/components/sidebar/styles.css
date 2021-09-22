@@ -19,14 +19,6 @@
     align-self: center;
 }
 
-_small {
-    height: 40px;
-    width: 47px;
-    border-radius: 8px;
-    background-color: #FFFFFF;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
-}
-
 .sidebar__container {
     background-color: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
