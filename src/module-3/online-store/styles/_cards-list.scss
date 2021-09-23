@@ -1,3 +1,5 @@
+@use "./media-mixins" as *;
+
 .cards-list {
     list-style: none;
     display: flex;
@@ -12,5 +14,9 @@
     &__item {
         flex: 32%;
         display: block;
+    }
+
+    @include mobile {
+        gap: 20px 0;
     }
 }

@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./media-mixins" as *;
 
 .card {
     font-weight: 400;
@@ -16,16 +17,32 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 30px 20px 5px;
+        position: relative;
+
+        .button_show-colors {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+        }
+
+        @include mobile {
+            height: 350px;
+            padding: 10px 10px 5px;
+        }
     }
 
     &__image {
         margin: auto;
         padding: 0 20px 30px;
-        max-height: 65%;
+        max-height: 65%;    
 
         img {
             max-width: 100%;
             height: 100%;
+        }
+
+        @include mobile {
+            padding: 0 0 15px;
         }
     }
 
@@ -58,6 +75,10 @@
         margin-top: 20px;
         width: 100%;
         display: flex;
+
+        @include mobile {
+            margin-top: 5px;
+        }
     }
 
     &__button {
@@ -65,7 +86,23 @@
         padding: 14px 10px;
         display: flex;
         justify-content: center;
+        border-radius: 0;
         @include text(18px, "small", "bold");
+
+        @include mobile {
+            .button__text {
+                font-size: 11px;
+                line-height: 11px;
+            }
+        }
+    }
+
+    @include desktop {
+        max-width: 400px;
+    }
+
+    @include tablet {
+        min-width: 255px;
     }
 }
 

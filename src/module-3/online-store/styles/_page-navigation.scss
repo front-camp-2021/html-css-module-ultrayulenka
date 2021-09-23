@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./media-mixins" as *;
 
 .page-navigation {
     display: flex;
@@ -25,6 +26,10 @@
         background-color: $secondary-color;
         border-radius: 20px;
         width: 75%;
+
+        @include mobile {
+            width: 60%;
+        }
     }
 
     &__item {
@@ -38,7 +43,7 @@
             text-align: center;
 
             .page-navigation__page-link {
-                @include disable-link;
+                @extend %disabled-link;
             }
 
         }
@@ -56,6 +61,16 @@
 
             &.page-navigation__item_current {
                 padding-right: 0;
+            }
+        }
+
+        @include mobile {
+            display: none;
+
+            &_current,
+            &:first-child,
+            &:last-child {
+                display: unset;
             }
         }
 

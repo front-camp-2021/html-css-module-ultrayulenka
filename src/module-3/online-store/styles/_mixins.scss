@@ -5,7 +5,7 @@
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135);
 }
 
-@mixin disable-link {
+%disabled-link {
     pointer-events: none;
     cursor: default;
 }
@@ -27,3 +27,4 @@
     position: $pos;
     @include box($width, $height);
 }
+

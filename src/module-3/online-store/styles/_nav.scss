@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./media-mixins" as *;
 
 .nav {
     display: flex;
@@ -7,7 +8,7 @@
     &__link {
         display: block;
         @include text(17px, "small", "regular");
-        color: $primary-color;
+        color: $purple-font-color;
         margin: 0 10px;
         align-self: flex-end;
 
@@ -17,7 +18,11 @@
 
         &_current {
             color: $font-color;
-            @include disable-link;
+            @extend %disabled-link;
+        }
+
+        @include mobile {
+            margin: 0 5px;
         }
     }
 }

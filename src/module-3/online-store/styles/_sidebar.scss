@@ -1,5 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./media-mixins" as *;
 
 .sidebar {
     width: 30%;
@@ -15,8 +16,26 @@
             align-self: center;
         }
 
-        .arrows_down {
-            display: none;
+        .arrows {
+            &_down {
+                display: none;
+
+                @include tablet {
+                    display: block;
+                }
+            }
+
+            &_left {
+                @include tablet {
+                    display:none;
+                }
+            }
+
+        }
+    
+
+        @include tablet {
+            margin: 0;
         }
     }
 
@@ -24,8 +43,39 @@
         background-color: $bg-color-container;
         @extend %small-shadow;
         border-radius: 8px;
-        margin-bottom: 42px;
+        margin-bottom: 2vh;
         min-height: 90%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    .button {
+        @include tablet {
+            &_large {
+                display: none;
+            }
+
+            &_small {
+                box-shadow: none;
+                background-color: transparent;
+            }
+        }
+    }
+
+    @include sm-desktop {
+        width: 48%;
+    }
+
+    @include tablet {
+        width: 100%;
+        height: fit-content;
+        padding: 5px;
+        background-color: $bg-color-container;
+        margin-bottom: 2vh;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135);
     }
 }
 
@@ -65,7 +115,8 @@
 .options-list {
     &__item {
         position: relative;
-        display: block;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__label {
@@ -102,7 +153,6 @@
     }
 
     &__amount {
-        float: right;
         @include text(normal, "small", "light");
         padding-top: 5px;
     }

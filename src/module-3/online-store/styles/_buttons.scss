@@ -1,6 +1,7 @@
 @use "sass:map";
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./media-mixins" as *;
 
 .button {
     border: none;
@@ -32,6 +33,10 @@
     &_small {
         @include box(47px, 40px);
         background-color: $bg-color-container;
+
+        @include tablet {
+            @include box(40px, 30px);
+        }
     }
 
     &.button_primary {

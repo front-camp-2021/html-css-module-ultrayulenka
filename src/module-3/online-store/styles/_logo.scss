@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "./variables" as *;
+@use "./media-mixins" as *;
 
 .logo-container {
     padding: 0 5px;
@@ -9,12 +10,36 @@
 
 .logo {
     margin-right: 20px;
+
+    &__icon {
+        @include tablet {
+            width: 64px;
+        }
+
+        @include mobile {
+            width: 45px;
+        }
+    }
+
+    @include mobile {
+        margin-right: 10px;
+    }
 }
 
 .title {
     font-size: map.get($logo-font-sizes, "regular");
     font-weight: map.get($font-weights, "bold");
     line-height: 27px;
-    color: $primary-color;
+    color: $purple-font-color;
     padding-top: 20px;
+
+    @include tablet {
+        font-size: map.get($logo-font-sizes, "tablet");
+        align-self: center;
+        padding: 0;
+    }
+
+    @include mobile {
+        font-size: map.get($logo-font-sizes, "mobile");
+    }
 }

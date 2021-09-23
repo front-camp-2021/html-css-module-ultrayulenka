@@ -1,6 +1,7 @@
 @use "sass:map";
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./media-mixins" as *;
 @use "./buttons";
 @use "./arrows";
 @use "./logo";
@@ -48,11 +49,25 @@ input {
     display: flex;
     justify-content: space-between;
     margin: 1vh 0 2vh;
+
+    @include tablet {
+        display: block;
+    }
 }
 
 .main {
     width: 68%;
+
+    @include sm-desktop {
+        width: 50%;
+    }
+
+    @include tablet {
+        width: 100%;
+    }
 }
+
+
 
 
 
