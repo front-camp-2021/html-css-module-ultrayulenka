@@ -45,11 +45,14 @@
     height: 100%;
 }
 
+.card__content {
+    color: #2C2C2C;
+}
+
 .card__details {
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .rating {
@@ -95,10 +98,41 @@
 }
 
 .card__buttons {
-    margin-top: 22px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
-    flex: 50%;
 }
 
+.button {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: #2C2C2C;
+}
+
+.button__text {
+    align-self: center;
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    display: block;
+    margin-left: 9px;
+}
+
+.button__icon {
+    align-self: center;
+    height: 13px;
+    width: 15px;
+}
+
+.button_primary {
+    background-color: #6F64F8;
+    color: #FFFFFF;
+}
 
