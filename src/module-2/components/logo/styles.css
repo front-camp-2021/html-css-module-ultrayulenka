@@ -1,0 +1,44 @@
+.logo-container {
+    padding: 0 5px;
+    display: flex;
+    margin-bottom: 1.75vh;
+}
+
+.logo {
+    margin-right: 22px;
+}
+
+.title {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #7E72F2;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 720px) {
+    .logo__icon {
+        width: 64px;
+    }
+
+    .title {
+        font-size: 36px;
+        align-self: center;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .logo {
+        margin-right: 10px;
+    }
+
+    .logo__icon {
+        width: 45px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}

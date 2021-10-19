@@ -1,0 +1,162 @@
+.sidebar {
+    width: 30%;
+    font-family: Montserrat, sans-serif;
+    color: #2C2C2C;
+    height: 85vh;
+
+}
+
+.sidebar__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    align-self: center;
+}
+
+.sidebar__container {
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+    border-radius: 8px;
+    margin-bottom: 42px;
+    min-height: 90%;
+}
+
+.filter-list {
+    width: 75%;
+    margin-left: 10%;
+    padding: 19px 0;
+    list-style: none;
+}
+
+.filter-item {
+    display: block;
+    position: relative;
+    margin-bottom: 63px;
+}
+
+.filter-item:last-child {
+    margin-bottom: 0;
+}
+
+.filter-item::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #D6D6D6;
+    position: absolute;
+    bottom: -28px;
+}
+
+.filter-item:last-of-type::after {
+    content: none;
+}
+
+.filter-item__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 21px;
+}
+
+.options-list__item {
+    position: relative;
+    display: block;
+}
+
+.options-list__label {
+    cursor: pointer;
+    margin-left: 13px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+.options-list__label::before {
+    content: '';
+    background-color: #FFFFFF;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    height: 17px;
+    width: 19px;  
+    top: 7px;
+}
+
+
+.options-list__label_round::before {
+    border-radius: 50%;
+    border: 1px solid #979797;
+    height: 15px;
+    width: 18px;
+    top: 8px;
+}
+
+.options-list__input {
+    visibility: hidden;
+}
+
+.options-list__input:checked ~ .options-list__label::before {
+    background-color: #6F64F8;
+}
+
+.options-list__amount {
+    float: right;
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.arrows_down {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) { 
+    .options-list__amount {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .sidebar {
+        width: 100%;
+        height: fit-content;
+        padding: 5px;
+        background-color: #ffffff;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+        margin-bottom: 2vh;
+        border-radius: 8px;
+    }
+
+    .sidebar__header {
+        margin: 0;
+    }
+
+    .sidebar__container {
+        display: none;
+    }
+
+    .sidebar__clear-button {
+        display: none;
+    }
+
+    .sidebar__show-button{
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .sidebar .arrows_left {
+        display: none;
+    }
+
+    .sidebar .arrows_down {
+        display: block;
+    }
+}

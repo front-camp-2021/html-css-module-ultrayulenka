@@ -1,0 +1,46 @@
+@use "sass:map";
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./media-mixins" as *;
+
+.button {
+    border: none;
+    cursor: pointer;
+    background-color: $secondary-color;
+    color: inherit;
+    border-radius: 8px;
+    @extend %small-shadow;
+
+    &__text {
+        align-self: center;
+        text-transform: uppercase;
+        @include text(18px, "small", "bold");
+        display: block;
+        margin-left: 9px;
+    }
+
+    &__icon {
+        align-self: center;
+        @include box(15px, 13px);
+    }
+
+    &_large {
+        display: block;
+        @include box(100%, 56px);
+        text-align: center;
+    }
+
+    &_small {
+        @include box(47px, 40px);
+        background-color: $bg-color-container;
+
+        @include tablet {
+            @include box(40px, 30px);
+        }
+    }
+
+    &.button_primary {
+        background-color: $primary-color;
+        color: $primary-font-color;
+    }
+}

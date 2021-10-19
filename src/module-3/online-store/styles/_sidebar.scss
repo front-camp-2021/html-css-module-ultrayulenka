@@ -1,0 +1,166 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./media-mixins" as *;
+
+.sidebar {
+    width: 30%;
+    height: 85vh;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1vh;
+
+        .section-title {
+            @include text(21px);
+            align-self: center;
+        }
+
+        .arrows {
+            &_down {
+                display: none;
+
+                @include tablet {
+                    display: block;
+                }
+            }
+
+            &_left {
+                @include tablet {
+                    display:none;
+                }
+            }
+
+        }
+    
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    &__container {
+        background-color: $bg-color-container;
+        @extend %small-shadow;
+        border-radius: 8px;
+        margin-bottom: 2vh;
+        min-height: 90%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    .button {
+        @include tablet {
+            &_large {
+                display: none;
+            }
+        }
+    }
+
+    &__clear-button {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__show-button {
+        @include tablet {
+            box-shadow: none;
+            background-color: transparent;
+        }
+    }
+
+    @include tablet {
+        width: 100%;
+        height: fit-content;
+        padding: 5px;
+        background-color: $bg-color-container;
+        margin-bottom: 2vh;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135);
+    }
+}
+
+.filter-list {
+    width: 75%;
+    margin-left: 10%;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.filter-item {
+    display: block;
+    position: relative;
+    margin-bottom: 63px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::after {
+        @include pseudo(100%, 1px, block, absolute);
+        background-color: #D6D6D6;
+        bottom: -28px;
+    }
+
+    &:last-of-type::after {
+        content: none;
+    }
+
+    &__title {
+        @include text(22px, "regular", "bold");
+        margin-bottom: 20px;
+    }
+}
+
+.options-list {
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__label {
+        cursor: pointer;
+        margin-left: 13px;
+        @include text(32px, "smaller", "light");
+
+        &::before {
+            @include pseudo(19px, 17px, block, absolute);
+            background-color: $bg-color-container;
+            cursor: pointer;
+            border: 1px solid $light-font-color;
+            border-radius: 3px; 
+            left: 0;
+            top: 7px;
+        }
+
+        &_round {
+            &::before {
+                @include box(18px, 15px);
+                border-radius: 50%;
+                border: 1px solid $light-font-color;
+                top: 8px;
+            }
+        }
+    }
+
+    &__input {
+        visibility: hidden;
+
+        &:checked ~ .options-list__label::before {
+            background-color: $primary-color;
+        }
+    }
+
+    &__amount {
+        @include text(normal, "small", "light");
+        padding-top: 5px;
+
+        @include sm-desktop {
+            display: none;
+        }
+    }
+}

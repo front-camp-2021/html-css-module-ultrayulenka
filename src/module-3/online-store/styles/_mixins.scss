@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "./variables" as *;
+
+%small-shadow {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135);
+}
+
+%disabled-link {
+    pointer-events: none;
+    cursor: default;
+}
+
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin text($line-height: normal, $size: "regular", $weight: "regular") {
+    font-size: map.get($font-sizes, $size);
+    font-weight: map.get($font-weights, $weight);
+    line-height: $line-height;
+}
+
+@mixin pseudo($width: 100%, $height: $width, $display: inline-block, $pos: relative, $content: "") {
+    content: $content;
+    display: $display;
+    position: $pos;
+    @include box($width, $height);
+}
+

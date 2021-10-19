@@ -1,0 +1,47 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.search {
+    color: $font-color;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1vh;
+    }
+
+    &__text {
+        align-self: center;
+        @include text(21px);
+    }
+}
+
+.searchbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $bg-color-container;
+    @extend %small-shadow;
+    border-radius: 8px;
+    padding: 0 22px 0 32px;
+
+    &__input {
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        @include text(26px, "bigger", "light");
+        color: $light-font-color;
+        padding: 20px 0 20px 0;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}

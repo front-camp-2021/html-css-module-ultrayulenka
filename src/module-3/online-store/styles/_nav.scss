@@ -1,0 +1,32 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./media-mixins" as *;
+
+.nav {
+    display: flex;
+
+    &__link {
+        display: block;
+        @include text(17px, "small", "regular");
+        color: $purple-font-color;
+        margin: 0 10px;
+        align-self: flex-end;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &_current {
+            color: $font-color;
+            @extend %disabled-link;
+        }
+
+        @include mobile {
+            margin: 0 5px;
+        }
+    }
+}
+
+.home-icon {
+    height: 17px;
+}

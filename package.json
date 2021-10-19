@@ -6,6 +6,8 @@
   "scripts": {
     "test": "cross-env NODE_ICU_DATA=node_modules/full-icu jest",
     "lint": "eslint \"./src/**/*.js\"",
+    "sass": "gulp build",
+    "sass:watch": "gulp"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,11 @@
     "jest": "^27.0.6",
     "jest-fetch-mock": "^3.0.3",
     "json-server": "^0.16.3",
-    "pretty-format": "^26.6.2"
+    "pretty-format": "^26.6.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.41.0"
   }
 }

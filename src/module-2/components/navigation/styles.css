@@ -1,0 +1,35 @@
+.nav {
+    display: flex;
+}
+
+.nav__link {
+    display: block;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #7E72F2;
+    margin: 0 13px;
+    align-self: flex-end;
+}
+
+.nav__link:first-child {
+    margin-left: 0;
+}
+
+.nav__link_current {
+    color: #2C2C2C;
+    pointer-events: none;
+    cursor: default;
+}
+
+.home-icon {
+    height: 17px;
+}
+
+@media screen and (max-width: 320px) {
+    .nav__link {
+        margin: 0 5px;
+    }
+}
+

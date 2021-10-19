@@ -1,0 +1,123 @@
+.card {
+    font-weight: 400;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+    border-radius: 8px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.card__inner {
+    height: 419px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px 5px;
+}
+
+.card__image {
+    margin: auto;
+    padding: 0 20px 30px;
+    max-height: 65%;
+}
+
+.card__image img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.card__details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.rating {
+    width: 65px;
+    background-color: #6F64F8;
+    border-radius: 3px;
+    padding: 6px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.rating__value {
+    display: block;
+    align-self: center;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.card__price {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.card__title {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.card__description {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14px; 
+    margin: 0; 
+    padding-top: 3px;
+}
+
+.card__button-group {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.card__button {
+    width: 100%;
+    padding: 14px 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+@media screen and (max-width: 1200px) { 
+    .card {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .card {
+        min-width: 255px;
+    }
+
+    .card__image {
+        padding: 0 0 15px;
+    }
+
+    .card__button-group {
+        margin-top: 5px;
+    }
+
+    .card__button .button__text {
+        font-size: 11px;
+        line-height: 11px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card__inner {
+        height: 350px;
+        padding: 10px 10px 5px;
+    }
+}

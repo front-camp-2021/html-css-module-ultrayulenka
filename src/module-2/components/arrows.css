@@ -1,0 +1,38 @@
+.arrows::before,
+.arrows::after {
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+}
+
+.arrows_right::after,
+.arrows_right::before {
+    border-right: 1px solid #2C2C2C;
+    border-top: 1px solid #2C2C2C;
+    transform: rotate(45deg);
+    margin-right: 1px;
+}
+
+.arrows_left::before,
+.arrows_left::after {
+    border-left: 1px solid #2C2C2C;
+    border-top: 1px solid #2C2C2C;
+    transform: rotate(-45deg);
+    bottom: 2px;
+}
+
+.arrows_left::before{
+    margin-right: 2px;
+}
+
+.arrows_down::before,
+.arrows_down::after {
+    display: block;
+    border-right: 1px solid #2C2C2C;
+    border-bottom: 1px solid #2C2C2C;
+    transform: rotate(45deg);
+    top: -2px;
+    left: 60%;
+}
