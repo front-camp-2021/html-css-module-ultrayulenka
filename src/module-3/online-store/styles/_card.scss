@@ -8,7 +8,6 @@
     @extend %small-shadow;
     border-radius: 8px;
     max-width: 500px;
-    min-width: 290px;
     overflow: hidden;
 
     &__inner {
@@ -41,7 +40,7 @@
             height: 100%;
         }
 
-        @include mobile {
+        @include tablet {
             padding: 0 0 15px;
         }
     }
@@ -76,7 +75,7 @@
         width: 100%;
         display: flex;
 
-        @include mobile {
+        @include tablet {
             margin-top: 5px;
         }
     }
@@ -89,16 +88,12 @@
         border-radius: 0;
         @include text(18px, "small", "bold");
 
-        @include mobile {
+        @include tablet {
             .button__text {
                 font-size: 11px;
                 line-height: 11px;
             }
         }
-    }
-
-    @include desktop {
-        max-width: 400px;
     }
 
     @include tablet {

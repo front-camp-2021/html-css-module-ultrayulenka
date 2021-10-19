@@ -56,16 +56,20 @@
             &_large {
                 display: none;
             }
-
-            &_small {
-                box-shadow: none;
-                background-color: transparent;
-            }
         }
     }
 
-    @include sm-desktop {
-        width: 48%;
+    &__clear-button {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__show-button {
+        @include tablet {
+            box-shadow: none;
+            background-color: transparent;
+        }
     }
 
     @include tablet {
@@ -84,32 +88,31 @@
     margin-left: 10%;
     padding: 20px 0;
     list-style: none;
+}
 
-    .filter-item {
-        display: block;
-        position: relative;
-        margin-bottom: 63px;
+.filter-item {
+    display: block;
+    position: relative;
+    margin-bottom: 63px;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &::after {
-            @include pseudo(100%, 1px, block, absolute);
-            background-color: #D6D6D6;
-            bottom: -28px;
-        }
-
-        &:last-of-type::after {
-            content: none;
-        }
-
-        &__title {
-            @include text(22px, "regular", "bold");
-            margin-bottom: 20px;
-        }
+    &:last-child {
+        margin-bottom: 0;
     }
 
+    &::after {
+        @include pseudo(100%, 1px, block, absolute);
+        background-color: #D6D6D6;
+        bottom: -28px;
+    }
+
+    &:last-of-type::after {
+        content: none;
+    }
+
+    &__title {
+        @include text(22px, "regular", "bold");
+        margin-bottom: 20px;
+    }
 }
 
 .options-list {
@@ -155,5 +158,9 @@
     &__amount {
         @include text(normal, "small", "light");
         padding-top: 5px;
+
+        @include sm-desktop {
+            display: none;
+        }
     }
 }

@@ -36,6 +36,10 @@ input {
   font-family: inherit; 
 }
 
+input:focus{
+    outline: none;
+}
+
 .wrapper {
     max-width: 1920px;
     margin: 0 auto;
@@ -58,15 +62,10 @@ input {
 .main {
     width: 68%;
 
-    @include sm-desktop {
-        width: 50%;
-    }
-
     @include tablet {
         width: 100%;
     }
 }
-
 
 
 

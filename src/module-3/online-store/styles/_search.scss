@@ -38,4 +38,10 @@
     &:focus {
         outline: none;
     }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
 }

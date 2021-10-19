@@ -4,11 +4,10 @@
 
 .page-navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     @include text(21px);
     letter-spacing: 4px;
     color: $font-color;
-    max-width: 472px;
     margin: 0 auto;
 
     &__page-link {
@@ -21,14 +20,13 @@
     &__list {
         display: flex;
         list-style: none;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         background-color: $secondary-color;
         border-radius: 20px;
-        width: 75%;
 
         @include mobile {
-            width: 60%;
+            width: 50%;
         }
     }
 
@@ -64,17 +62,39 @@
             }
         }
 
-        @include mobile {
+        @include tablet {
             display: none;
 
-            &_current,
+        
             &:first-child,
-            &:last-child {
+            &:last-child,
+            &_current,
+            &_next,
+            &_prev {
                 display: unset;
             }
         }
 
+        @include mobile {
+            &_next,
+            &_prev {
+                display: none;
+            }
+        }
+
     }
+}
+
+.page-navigation__item + .page-navigation__item {
+    margin-left: 15px;
+}
+
+#prev-page {
+    margin-right: 20px;
+}
+
+#next-page {
+    margin-left: 20px;
 }
 
 #prev-page,

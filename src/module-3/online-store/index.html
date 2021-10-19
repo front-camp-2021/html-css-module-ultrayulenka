@@ -45,15 +45,15 @@
       </header>
       <div class="content">
           <aside class="sidebar">
-              <div class="sidebar__header">
-                  <h3 class="section-title">
-                      Filters
-                  </h3>
-                  <button class="button button_small">
-                      <div class="arrows arrows_left"></div>
-                      <div class="arrows arrows_down"></div>
-                  </button>
-              </div>
+            <div class="sidebar__header">
+                <h3 class="section-title">
+                    Filters
+                </h3>
+                <button class="sidebar__show-button button button_small">
+                    <div class="arrows arrows_left"></div>
+                    <div class="arrows arrows_down"></div>
+                </button>
+            </div>
               <div class="sidebar__container">
                   <ul class="filter-list">
                       <li class="filter-item">
@@ -243,22 +243,24 @@
                       </li>
                   </ul>
               </div>
-              <button class="button button_primary button_large">
+              <button class="sidebar__clear-button button button_primary button_large">
                   CLEAR ALL FILTERS
               </button>
           </aside>
           <main class="main">
               <div class="search">
-                  <div class="search__header">
-                      <span class="search__text">7,618 results found</span>
-                      <button class="button button_small button_primary">
-                          <img class="button__icon" src="images/heart-white.svg" alt="">
-                      </button>
-                  </div>
-                  <div class="searchbar">
-                      <input class="searchbar__input" type="text" placeholder="Search">
-                      <img class="searchbar__icon" src="images/search.svg" alt="">
-                  </div>
+                <div class="search__header">
+                    <span class="search__text">7,618 results found</span>
+                    <button class="button button_small button_primary">
+                        <img class="button__icon" src="images/heart-white.svg" alt="">
+                    </button>
+                </div>
+                <form class="searchbar">
+                    <input class="searchbar__input" type="text" placeholder="Search">
+                    <button class="searchbar__button "type="submit">
+                    <img class="searchbar__icon" src="images/search.svg" alt="">
+                    </button>
+                </form>
               </div>
               <ul class="cards-list">
                   <li class="card cards-list__item">
@@ -570,13 +572,13 @@
               <li class="page-navigation__item">
                   <a href="#" class="page-navigation__page-link">4</a>
               </li>
-              <li class="page-navigation__item">
+              <li class="page-navigation__item page-navigation__item_prev">
                   <a href="#" class="page-navigation__page-link">5</a>
               </li>
               <li class="page-navigation__item page-navigation__item_current">
                   <a href="#" class="page-navigation__page-link">6</a>
               </li>
-              <li class="page-navigation__item">
+              <li class="page-navigation__item page-navigation__item_next">
                   <a href="#" class="page-navigation__page-link">7</a>
               </li>
               <li class="page-navigation__item">

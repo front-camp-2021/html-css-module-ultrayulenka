@@ -143,20 +143,20 @@
         display: none;
     }
 
-    .sidebar .button_large {
+    .sidebar__clear-button {
         display: none;
     }
 
-    .sidebar .button_small {
+    .sidebar__show-button{
         box-shadow: none;
         background-color: transparent;
     }
 
-    .arrows_left {
+    .sidebar .arrows_left {
         display: none;
     }
 
-    .arrows_down {
+    .sidebar .arrows_down {
         display: block;
     }
 }
